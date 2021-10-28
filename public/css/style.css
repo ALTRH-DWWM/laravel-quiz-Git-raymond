@@ -1,6 +1,6 @@
 body {
     font-family: Monospace, sans-serif;
-    background-color: pink;
+    background-color: slategray;
 }
 
 h1 {
@@ -27,6 +27,11 @@ p {
 
 a {
     color: yellowgreen;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 .container {
