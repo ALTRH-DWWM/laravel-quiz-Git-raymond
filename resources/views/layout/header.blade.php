@@ -4,6 +4,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
 
+        <!-- Bootsrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
         <!-- Reset CSS -->
         <link href="{{ URL::asset('/') }}css/reset.css"  rel="stylesheet">
 
@@ -55,6 +58,13 @@
                     </li>
 
                     <li>
+                        <a href="{{route('tags')}}">
+                            <i></i>
+                            Les sujets
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="#">
                             <i></i>
                             Déconnexion
@@ -63,3 +73,4 @@
 
                 </ul>
             </nav>
+            

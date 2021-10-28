@@ -20,3 +20,11 @@ Route::get('/signup', 'App\Http\Controllers\UserController@signupAction')->name(
 Route::get('/signin', 'App\Http\Controllers\UserController@signinAction')->name('signin');
 
 Route::get('/quiz/{id}', 'App\Http\Controllers\QuizController@quizAction')->name('quiz');
+
+Route::post('/signup', 'App\Http\Controllers\UserController@signupPostAction')->name('signup_post');
+
+// Route::post('/signin', 'App\Http\Controllers\UserController@signupPostAction')->name('signin_post');
+
+Route::get('/tags', 'App\Http\Controllers\TagController@tagsAction')->name('tags');
+
+Route::get('/tags/{tagId}/quiz', 'App\Http\Controllers\TagController@quizzesAction')->name('tag_quizzes');

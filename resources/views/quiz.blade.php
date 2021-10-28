@@ -16,7 +16,9 @@ $levelClasses = [
 
             <div>
                 @foreach($quiz->tags as $tag)
-                <span class="btn btn-primary">{{$tag->name}}</span>
+                <a class="badge badge-primary" href="{{route('tag_quizzes', ['tagId' => $tag->id])}}">
+                    <span class="badge badge-primary">{{$tag->name}}</span>
+                </a>
                 @endforeach
             </div>
 
