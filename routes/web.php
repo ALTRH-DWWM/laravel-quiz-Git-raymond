@@ -18,3 +18,5 @@ Route::get('/', 'App\Http\Controllers\MainController@homeAction')->name('home');
 Route::get('/signup', 'App\Http\Controllers\UserController@signupAction')->name('signup');
 
 Route::get('/signin', 'App\Http\Controllers\UserController@signinAction')->name('signin');
+
+Route::get('/quiz/{id}', 'App\Http\Controllers\QuizController@quizAction')->name('quiz');

@@ -13,7 +13,9 @@
             <ul>
                 @foreach($quizList as $quiz)
                 <div class="col">
-                    <h3>{{$quiz->title}}</h3>
+                    <a href="{{route('quiz', ['id' => $quiz->id])}}">
+                        <h3>{{$quiz->title}}</h3>
+                    </a>
                     <h5>{{$quiz->description}}</h5>
                     <p>par {{$quiz->user->firstname}} {{$quiz->user->lastname}}</p>
                 </div>
