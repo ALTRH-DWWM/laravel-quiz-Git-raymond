@@ -23,8 +23,14 @@ Route::get('/quiz/{id}', 'App\Http\Controllers\QuizController@quizAction')->name
 
 Route::post('/signup', 'App\Http\Controllers\UserController@signupPostAction')->name('signup_post');
 
-// Route::post('/signin', 'App\Http\Controllers\UserController@signupPostAction')->name('signin_post');
-
 Route::get('/tags', 'App\Http\Controllers\TagController@tagsAction')->name('tags');
 
 Route::get('/tags/{tagId}/quiz', 'App\Http\Controllers\TagController@quizzesAction')->name('tag_quizzes');
+
+Route::post('/signin', 'App\Http\Controllers\UserController@signinPostAction')->name('signin_post');
+
+Route::get('/profile', 'App\Http\Controllers\UserController@profileAction')->name('profile');
+
+Route::post('/signout', 'App\Http\Controllers\UserController@signoutAction')->name('signout');
+
+Route::post('/quiz/{id}', 'App\Http\Controllers\QuizController@quizPostAction')->name('quiz_post');

@@ -15,4 +15,14 @@ class Question extends Model
     {
         return $this->belongsTo('App\\Models\\Level', 'levels_id');
     }
+
+    public function goodAnswer()
+    {
+        return $this->belongsTo('App\\Models\\Answer', 'answers_id');
+    }
+
+    public function isGoodAnswer($answerId)
+    {
+        return $this->goodAnswer->id == $answerId;
+    }
 }

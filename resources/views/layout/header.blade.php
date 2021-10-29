@@ -1,3 +1,7 @@
+<?php
+use App\Utils\UserSession;
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -35,7 +39,14 @@
                             Accueil
                         </a>
                     </li>
-
+                    @if(UserSession::isConnected())
+                    <li>
+                        <a href="{{route('profile')}}">
+                            <i></i>
+                            Mon compte
+                        </a>
+                    </li>
+                    @else
                     <li>
                         <a href="{{route('signup')}}">
                             <i></i>
@@ -49,28 +60,22 @@
                             Connexion
                         </a>
                     </li>
-
-                    <li>
-                        <a href="#">
-                            <i></i>
-                            Mon compte
-                        </a>
-                    </li>
-
+                    @endif
                     <li>
                         <a href="{{route('tags')}}">
                             <i></i>
                             Les sujets
                         </a>
                     </li>
-
+                    @if(UserSession::isConnected())
                     <li>
-                        <a href="#">
-                            <i></i>
-                            Déconnexion
-                        </a>
+                        <form action="{{route('signout')}}" method="post">
+                            @csrf
+                            <button type="submit" class="btn btn-primary">
+                                Déconnexion
+                            </button>
+                        </form>
                     </li>
-
+                    @endif
                 </ul>
             </nav>
-            

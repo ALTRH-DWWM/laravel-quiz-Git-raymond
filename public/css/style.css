@@ -85,6 +85,20 @@ ul {
     margin: 0.625rem 0;
 }
 
+.question__question__answer{
+    padding: .1rem;
+}
+
+.question__question__answer--good{
+    background-color: green;
+    color: white;
+}
+
+.question__question__answer--bad{
+    background-color: red;
+    color: white;
+}
+
 .btn {
     display: block;
     width: 100%;
